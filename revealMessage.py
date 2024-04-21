@@ -99,6 +99,16 @@ while True:
     rv=reveal_message("C:/Users/gokul.000/Desktop/steg_try/revealed_image.png")
     #print(rv)
     #print("Revealed message:", rv)
+    #print("length",len(rv))
+    rv1=""
+    for g in rv:
+        if((ord(g)>=48 and ord(g)<=57) or (ord(g)>=97 and ord(g)<=122)):
+            rv1+=g
+        else:
+            break
+    rv=rv1
+    #print("Revealed message:", rv)
+    #print("length",len(rv))
     bk=input("Enter key for blowfish: ")
     bk=bk.lower()
     #bk="aabb09182736ccdd"
